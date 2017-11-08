@@ -1,0 +1,1 @@
+# CSE512-Project-Hotspot-Analysis-Template
