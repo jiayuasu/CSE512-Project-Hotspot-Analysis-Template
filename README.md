@@ -1,6 +1,6 @@
 # CSE512-Project-Hotspot-Analysis-Template
 #### Version history
-v1.0 Initial version
+v1.0, Nov 13, Initial version
 
 
 ## Requirement
@@ -64,7 +64,7 @@ The main function/entrace is "cse512.Entrance" scala file.
 The input point data can be any small subset of NYC taxi dataset.
 
 #### Hot cell analysis
-The input point data is a monthly NYC taxi trip dataset like "yellow\_tripdata\_2009-01\_point.csv"
+The input point data is a monthly NYC taxi trip dataset (2009-2012) like "yellow\_tripdata\_2009-01\_point.csv"
 
 ### Output data format
 
@@ -111,9 +111,9 @@ In the code template,
 
 ## Submission
 ### Deadline
-
+Dec 1st 11:59pm 2017
 ### Submission files
-1. Submit your project source code on Vocareum website in a folder called "**CSE512-Hotspot-Analysis-Template**" to get your grade.
+1. Submit your project jar package on Vocareum website in a folder called "**CSE512-Hotspot-Analysis-Template**" to get your grade.
 2. Submit your project source code onto Blackboard in a compress zip file of "cse512-phase3-GROUPNAME" for plagiarism detection.
 3. Note that: you need to make sure your code can compile and package by entering ```sbt clean assembly```. We will run the compiled package on our cluster directly using "spark-submit" with parameters. If your code cannot compile and package, you will not receive any points.
 
