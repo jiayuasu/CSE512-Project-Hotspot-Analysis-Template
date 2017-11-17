@@ -1,5 +1,6 @@
 # CSE512-Project-Hotspot-Analysis-Template
 #### Version history
+v1.1, Nov 16, Fix a bug in "Entrace.scala"
 v1.0, Nov 13, Initial version
 
 
