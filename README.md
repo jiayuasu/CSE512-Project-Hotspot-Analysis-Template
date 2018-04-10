@@ -111,11 +111,9 @@ In the code template,
 
 
 ## Submission
-### Deadline
-Dec 1st 11:59pm 2017
 ### Submission files
 1. Submit your project jar package on Vocareum website to get your grade.
-2. Submit your project source code onto Blackboard in a compress zip file of "cse512-phase3-GROUPNAME" for plagiarism detection.
+2. Submit your project source code onto Blackboard and follow the submission instruction on BB.
 3. Note that: you need to make sure your code can compile and package by entering ```sbt clean assembly```. We will run the compiled package on our cluster directly using "spark-submit" with parameters. If your code cannot compile and package, you will not receive any points.
 
 ## Tips (Optional)
