@@ -43,7 +43,7 @@ However, you don't need to worry about how to decide the cell coordinates becaus
 
 Example
 ```
-test/output hotzoneanalysis src/resources/point-hotzone.csv src/resources/zone-hotzone.csv hotcellanalysis src/resources/yellow_tripdata_2009-01_point.csv
+test/output hotzoneanalysis src/resources/point-hotzone.csv src/resources/zone-hotzone.csv hotcellanalysis src/resources/yellow_trip_sample_100000.csv
 ```
 
 Note: 
