@@ -1,6 +1,9 @@
 # CSE512-Project-Hotspot-Analysis-Template
+
 #### Version history
+v1.2 Update the readme to work with Canvas
 v1.1, Nov 16, Fix a bug in "Entrace.scala"
+
 v1.0, Nov 13, Initial version
 
 
@@ -20,6 +23,8 @@ This task will focus on applying spatial statistics to spatio-temporal big data 
 The Problem Definition page is here: [http://sigspatial2016.sigspatial.org/giscup2016/problem](http://sigspatial2016.sigspatial.org/giscup2016/problem) 
 
 The Submit Format page is here: [http://sigspatial2016.sigspatial.org/giscup2016/submit](http://sigspatial2016.sigspatial.org/giscup2016/submit)
+
+Note that: You may clip the source data to an envelope (latitude 40.5N – 40.9N, longitude 73.7W – 74.25W) encompassing the New York City in order to remove some of the noisy error data.
 
 #### Special requirement (different from GIS CUP)
 As stated in the Problem Definition page, in this task, you are asked to implement a Spark program to calculate the Getis-Ord statistic of NYC Taxi Trip datasets. We call it "**Hot cell analysis**"
@@ -112,9 +117,8 @@ In the code template,
 
 ## Submission
 ### Submission files
-1. Submit your project jar package on Vocareum website to get your grade.
-2. Submit your project source code onto Blackboard and follow the submission instruction on BB.
-3. Note that: you need to make sure your code can compile and package by entering ```sbt clean assembly```. We will run the compiled package on our cluster directly using "spark-submit" with parameters. If your code cannot compile and package, you will not receive any points.
+1. Submit your project source code onto Canvas and follow the submission instruction.
+2. Note that: you need to make sure your code can compile and package by entering ```sbt clean assembly```. We will run the compiled package on our cluster directly using "spark-submit" with parameters. If your code cannot compile and package, you will not receive any points.
 
 ## Tips (Optional)
 This section is same with that in Phase 2.
