@@ -3,6 +3,7 @@ package cse512
 import java.sql.Timestamp
 import java.text.SimpleDateFormat
 import java.util.Calendar
+import scala.collection.mutable.ListBuffer
 
 object HotcellUtils {
   val coordinateStep = 0.01
@@ -48,4 +49,32 @@ object HotcellUtils {
   }
 
   // YOU NEED TO CHANGE THIS PART
+  def gScoreCalculate(cellStr: String, cellCount: Int, mapHotCell: Map[String, Long], minXVal: Int, maxXVal: Int , minYVal: Int, maxYVal: Int, minZVal: Int, maxZVal: Int, meanVal : Double, standardDeviationVal : Double): Double =
+  {
+
+    var cellNeighbors = new ListBuffer[Long]()
+
+    val cellX :: cellY :: cellZ :: _ = cellStr.split(",").toList
+    for(timeStep <- cellZ.toInt.-(1) to cellZ.toInt.+(1)) {
+
+      for(latitudeVal <- cellX.toInt.-(1) to cellX.toInt.+(1)) {
+
+        for(longitudeVal <- cellY.toInt.-(1) to cellY.toInt.+(1)) {
+
+          if(latitudeVal >= minXVal && latitudeVal <= maxXVal && longitudeVal >= minYVal && longitudeVal <= maxYVal && timeStep >= minZVal && timeStep <= maxZVal) {
+
+            if (mapHotCell.contains(latitudeVal.toString +','+ longitudeVal.toString +','+ timeStep.toString))
+
+              cellNeighbors += mapHotCell(latitudeVal.toString +','+ longitudeVal.toString +','+ timeStep.toString)
+
+            else
+
+              cellNeighbors += 0
+          }
+        }
+      }
+    }
+    val gScore = cellNeighbors.sum.-(meanVal.*(cellNeighbors.size))./(standardDeviationVal.*(scala.math.sqrt((cellNeighbors.size).*(cellCount).-((cellNeighbors.size).*(cellNeighbors.size))./(cellCount.-(1)))))
+    return gScore
+  }
 }
